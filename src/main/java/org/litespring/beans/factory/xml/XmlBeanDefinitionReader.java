@@ -12,7 +12,7 @@ import org.litespring.beans.BeanDefinition;
 import org.litespring.beans.factory.BeanDefinitionStoreException;
 import org.litespring.beans.factory.support.BeanDefinitionRegistry;
 import org.litespring.beans.factory.support.GenericBeanDefinition;
-import org.litespring.utils.ClassUtils;
+import org.litespring.util.ClassUtils;
 
 public class XmlBeanDefinitionReader {
 	

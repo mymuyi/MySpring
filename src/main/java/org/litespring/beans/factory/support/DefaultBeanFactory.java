@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.litespring.beans.BeanDefinition;
 import org.litespring.beans.factory.BeanCreationException;
 import org.litespring.beans.factory.BeanFactory;
-import org.litespring.utils.ClassUtils;
+import org.litespring.util.ClassUtils;
 
 public class DefaultBeanFactory implements BeanFactory, BeanDefinitionRegistry{
 

@@ -1,4 +1,4 @@
-package org.litespring.utils;
+package org.litespring.util;
 
 public abstract class ClassUtils {
 	public static ClassLoader getDefaultClassLoader() {
