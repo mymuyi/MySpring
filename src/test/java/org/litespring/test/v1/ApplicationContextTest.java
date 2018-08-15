@@ -22,7 +22,7 @@ public class ApplicationContextTest {
 	@Test
 	public void TestGetBeanFromFileSystem() {
 		
-		ApplicationContext ctx = new FileSystemXmlApplication("C:\\petstore-v1.xml");
+		ApplicationContext ctx = new FileSystemXmlApplication("src/test/resources/petstore-v1.xml");
 
 		PetStoreService petStore = (PetStoreService) ctx.getBean("petStore");
 
