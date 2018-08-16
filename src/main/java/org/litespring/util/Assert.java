@@ -7,5 +7,4 @@ public class Assert {
 			throw new IllegalArgumentException(message);
 		}
 	}
-
 }

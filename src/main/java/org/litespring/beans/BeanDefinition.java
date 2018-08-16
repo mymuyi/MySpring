@@ -1,5 +1,12 @@
 package org.litespring.beans;
 
+import java.util.List;
+
+/**
+ * 保存 bean 的定义信息
+ * @author 木易
+ *
+ */
 public interface BeanDefinition {
 	
 	public static final String SCOPE_SINGLETON = "singleton";
@@ -15,5 +22,7 @@ public interface BeanDefinition {
 	String getScope();
 	
 	void setScope(String scope);
+
+	List<PropertyValue> getPropertyValues();
 
 }
