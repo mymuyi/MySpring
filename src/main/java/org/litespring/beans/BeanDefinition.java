@@ -3,7 +3,7 @@ package org.litespring.beans;
 import java.util.List;
 
 /**
- * 保存 bean 的定义信息
+ * 保存 bean 的定义信息，不包含 bean 实例
  * @author 木易
  *
  */

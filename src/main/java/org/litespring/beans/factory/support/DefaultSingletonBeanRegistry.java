@@ -8,6 +8,9 @@ import org.litespring.util.Assert;
 
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistery {
 
+	/**
+	 * scope 为 singleton 的 bean 实例
+	 */
 	private final Map<String, Object> singletonObject = new ConcurrentHashMap<>(64);
 
 	@Override

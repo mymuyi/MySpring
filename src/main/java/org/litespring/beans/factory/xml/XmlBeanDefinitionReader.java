@@ -19,6 +19,11 @@ import org.litespring.beans.factory.support.GenericBeanDefinition;
 import org.litespring.core.io.Resource;
 import org.litespring.util.StringUtils;
 
+/**
+ * 解析配置文件，将所有的 bean 的定义注册到 factory 中
+ * @author 木易
+ *
+ */
 public class XmlBeanDefinitionReader {
 
 	public static final String ID_ATTRIBUTE = "id";

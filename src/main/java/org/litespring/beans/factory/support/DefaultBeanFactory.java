@@ -17,6 +17,9 @@ import org.litespring.util.ClassUtils;
 public class DefaultBeanFactory extends DefaultSingletonBeanRegistry
 		implements ConfigurableBeanFactory, BeanDefinitionRegistry {
 
+	/**
+	 * 配置文件中所有的 bean 定义
+	 */
 	private final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>(64);
 	private ClassLoader beanClassLoader;
 
@@ -76,16 +79,18 @@ public class DefaultBeanFactory extends DefaultSingletonBeanRegistry
 
 		BeanDefinitionValueResolver valueResolver = new BeanDefinitionValueResolver(this);
 
-		SimpleTypeConverter converter = new SimpleTypeConverter(); 
-		
+		SimpleTypeConverter converter = new SimpleTypeConverter();
+
 		try {
+
+			BeanInfo beanInfo = Introspector.getBeanInfo(bean.getClass());
+			PropertyDescriptor[] pds = beanInfo.getPropertyDescriptors();
+
 			for (PropertyValue pv : pvs) {
 				String propertyName = pv.getName();
 				Object originalValue = pv.getValue();
 				Object resolvedValue = valueResolver.resolveValueIfNecessary(originalValue);
 
-				BeanInfo beanInfo = Introspector.getBeanInfo(bean.getClass());
-				PropertyDescriptor[] pds = beanInfo.getPropertyDescriptors();
 				for (PropertyDescriptor pd : pds) {
 					if (pd.getName().equals(propertyName)) {
 						Object convertedValue = converter.convertIfNecessary(resolvedValue, pd.getPropertyType());

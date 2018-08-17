@@ -1,5 +1,10 @@
 package org.litespring.beans;
 
+/**
+ * 类型不匹配异常
+ * @author 木易
+ *
+ */
 public class TypeMismatchException extends BeansException {
 	private transient Object value;
 	private Class<?> requiredType;

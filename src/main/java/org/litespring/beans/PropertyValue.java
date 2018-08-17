@@ -1,5 +1,10 @@
 package org.litespring.beans;
 
+/**
+ * 保存 bean 的 property
+ * @author 木易
+ *
+ */
 public class PropertyValue {
 
 	private String name;
