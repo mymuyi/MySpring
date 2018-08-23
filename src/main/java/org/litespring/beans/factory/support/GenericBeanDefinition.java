@@ -22,8 +22,16 @@ public class GenericBeanDefinition implements BeanDefinition {
 		this.beanClassName = beanClassName;
 	}
 
+	public GenericBeanDefinition() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getBeanClassName() {
 		return this.beanClassName;
+	}
+	
+	public void setBeanClassName(String beanClassName) {
+		this.beanClassName = beanClassName;
 	}
 
 	@Override
@@ -56,6 +64,10 @@ public class GenericBeanDefinition implements BeanDefinition {
 	@Override
 	public ConstructorArgument getConstructorArgument() {
 		return this.constructorArgument;
+	}
+	
+	public void setID(String id) {
+		this.id = id;
 	}
 
 	@Override
