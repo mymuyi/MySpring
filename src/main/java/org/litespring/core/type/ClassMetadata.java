@@ -1,5 +1,10 @@
 package org.litespring.core.type;
 
+/**
+ * 类的元数据
+ * @author 木易
+ *
+ */
 public interface ClassMetadata {
 
 	/**

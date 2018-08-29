@@ -7,6 +7,11 @@ import org.litespring.beans.factory.config.AutowireCapableBeanFactory;
 import org.litespring.beans.factory.config.DependencyDescriptor;
 import org.litespring.util.ReflectionUtils;
 
+/**
+ * 要被注入的字段元素
+ * @author 木易
+ *
+ */
 public class AutowiredFieldElement extends InjectionElement {
 	boolean required;
 
@@ -19,6 +24,9 @@ public class AutowiredFieldElement extends InjectionElement {
 		return (Field) this.member;
 	}
 
+	/**
+	 * 注入到目标对象中
+	 */
 	@Override
 	public void inject(Object target) {
 

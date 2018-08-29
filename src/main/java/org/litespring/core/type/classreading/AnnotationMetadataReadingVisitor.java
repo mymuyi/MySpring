@@ -18,7 +18,7 @@ public class AnnotationMetadataReadingVisitor extends ClassMetadataReadingVisito
 	private final Set<String> annotationSet = new LinkedHashSet<String>(4);
 
 	/**
-	 * 注解名以及属性
+	 * 注解名以及属性(如 value)
 	 */
 	private final Map<String, AnnotationAttributes> attributeMap = new LinkedHashMap<String, AnnotationAttributes>(4);
 

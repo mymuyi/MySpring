@@ -31,6 +31,12 @@ public class PackageResourceLoader {
 		return this.classLoader;
 	}
 
+	/**
+	 * 将给定包名中的字节码转换为 Resource
+	 * @param basePackage
+	 * @return
+	 * @throws IOException
+	 */
 	public Resource[] getResources(String basePackage) throws IOException {
 		Assert.notNull(basePackage, "basePackage  must not be null");
 		String location = ClassUtils.convertClassNameToResourcePath(basePackage);

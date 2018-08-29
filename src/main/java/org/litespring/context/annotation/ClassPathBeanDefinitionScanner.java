@@ -31,6 +31,12 @@ public class ClassPathBeanDefinitionScanner {
 		this.registry = registry;
 	}
 
+	/**
+	 * 对指定的 package 进行扫描，找到那些标记为@Component 的类，
+	 * 创建ScannedGenericBeanDefinition，并且注册到BeanFactory中。
+	 * @param packagesToScan
+	 * @return
+	 */
 	public Set<BeanDefinition> doScan(String packagesToScan) {
 
 		String[] basePackages = StringUtils.tokenizeToStringArray(packagesToScan, ",");

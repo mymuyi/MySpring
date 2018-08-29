@@ -24,6 +24,7 @@ final class AnnotationAttributesReadingVisitor extends AnnotationVisitor {
 		this.attributesMap.put(this.annotationType, this.attributes);
 	}
 
+	@Override
 	public void visit(String attributeName, Object attributeValue) {
 		this.attributes.put(attributeName, attributeValue);
 	}
