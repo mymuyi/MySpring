@@ -12,6 +12,8 @@ buildNumber.properties
     
 # Compiled class file
 *.class
+*.classpath
+*.properties
 
 # Log file
 *.log
@@ -35,3 +37,5 @@ buildNumber.properties
 hs_err_pid*
 
 .idea
+.idea/
+.project
